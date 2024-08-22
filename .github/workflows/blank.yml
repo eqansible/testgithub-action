@@ -28,6 +28,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
       - uses: hmarr/auto-approve-action@v4
+        with:
+          github-token: ${{ github.token }}
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
