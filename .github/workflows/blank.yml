@@ -27,6 +27,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
       - uses: hmarr/auto-approve-action@v4
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
