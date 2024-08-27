@@ -27,10 +27,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
-      - uses: hmarr/auto-approve-action@v4
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-
+      
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echodfdf Hello, world!
@@ -40,3 +37,6 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      - uses: hmarr/auto-approve-action@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
